@@ -50,34 +50,35 @@ const ContextMenu = (props) => {
                 top: `${position.y}px`,
             }}>
                 <MenuItems>
-                    <FontAwesomeIcon icon={faThLarge} size="xs" /> &nbsp;View
-                    <FontAwesomeIcon className="fontawesome-contextmenu" icon={faChevronRight} size="s" />
+                    <FontAwesomeIcon icon={faThLarge} size="xs" /> <ItemName>View</ItemName>
+                    <FontAwesomeIcon className="view" icon={faChevronRight} size="s" />
                 </MenuItems>
                 <MenuItems>
-                    <FontAwesomeIcon icon={faSortAmountUpAlt} size="xs" />&nbsp;&nbsp;&nbsp;Sort by
-                    <FontAwesomeIcon className="fontawesome-contextmenu" icon={faChevronRight} size="s" />
+                    <FontAwesomeIcon icon={faSortAmountUpAlt} size="xs" /><ItemName>Sort by</ItemName>
+                    <FontAwesomeIcon className="sort" icon={faChevronRight} size="s" />
                 </MenuItems>
                 <ListSeparator disabled></ListSeparator>
                 <MenuItems>
-                    <FontAwesomeIcon icon={faUndo} size="xs" />&nbsp;&nbsp;&nbsp;Undo Rename
+                    <FontAwesomeIcon icon={faUndo} size="xs" /><ItemName>Undo Rename</ItemName>
                 </MenuItems>
                 <MenuItems>
-                    <FontAwesomeIcon icon={faPlusCircle} size="xs" />&nbsp;&nbsp;&nbsp;New Item
-                </MenuItems>
-                <ListSeparator></ListSeparator>
-                <MenuItems>
-                    <FontAwesomeIcon icon={faCogs} size="xs" />&nbsp;&nbsp;&nbsp;Display Settings
-                </MenuItems>
-                <MenuItems>
-                    <FontAwesomeIcon icon={faPaintBrush} size="xs" />&nbsp;&nbsp;&nbsp;Personalize
+                    <FontAwesomeIcon icon={faPlusCircle} size="xs" /><ItemName>New Item</ItemName>
                 </MenuItems>
                 <ListSeparator></ListSeparator>
                 <MenuItems>
-                    <FontAwesomeIcon icon={faTerminal} size="xs" />&nbsp;&nbsp;&nbsp;Open Windows Terminal
+                    <FontAwesomeIcon icon={faCogs} size="xs" /><ItemName>Display Settings</ItemName>
+                </MenuItems>
+                <MenuItems>
+                    <FontAwesomeIcon icon={faPaintBrush} size="xs" /><ItemName>Personalize</ItemName>
                 </MenuItems>
                 <ListSeparator></ListSeparator>
                 <MenuItems>
-                    <FontAwesomeIcon icon={faChromecast} size="xs" />&nbsp;&nbsp;&nbsp;More Options
+                    <FontAwesomeIcon icon={faTerminal} size="xs" /><ItemName>Open Windows Terminal</ItemName>
+                </MenuItems>
+                <ListSeparator></ListSeparator>
+                <MenuItems>
+                    <FontAwesomeIcon icon={faChromecast} size="xs" /><ItemName>More Options</ItemName>
+                    <FontAwesomeIcon className="more" icon={faChevronRight} size="s" />
                 </MenuItems>
             </MenuList>
         </Container >
@@ -116,7 +117,7 @@ const MenuItems = styled.li`
             }
             padding: 10px 5px 10px 5px;
             border-left: 4px solid transparent;
-            width:100%;
+            width:86%;
             text-align:left;
             `
 
@@ -125,3 +126,8 @@ const ListSeparator = styled.li`
             background:#dedede;
             margin:2px 0px 2px 0px;
             `
+
+const ItemName = styled.span`
+
+padding: 0 10px 0 5px;
+`
